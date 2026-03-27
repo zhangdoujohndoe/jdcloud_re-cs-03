@@ -1,6 +1,6 @@
 # 京东云AX3000路由器CI自动编译固件
 
-本项目自动编译京东云后羿(/哪吒) ，型号RE-CS-03(IPQ5018平台)的固件，OpenWRT官方源码。
+本项目自动编译京东云后羿/哪吒 ，型号RE-CS-03/RE-CS-03U(IPQ5018平台)的固件，OpenWRT官方源码。
 
 
 |   Snapshots   |   |
@@ -13,16 +13,16 @@
 - [OpenWRT](https://github.com/openwrt/openwrt)官方源码，和设备专用补丁
 - 全功能OpenSSH
 - 编译全部KMOD安装包，确保安装软件不缺依赖，KMOD安装包在压缩包文件snapshots.tar.gz中
-- 没有NSS加速功能，其他功能都正常
+- ~~没有NSS加速功能，其他~~ 功能都正常
 
 ## 刷机
 
 刷机需要拆机用TTL刷，详细方法过程参考恩山的[帖子](https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=8428102)。
 
 1. 拆机，连接TTL线，网线插到WAN口，配置好终端和TFPTD64，插电
-2. TTL终端输入jdqca中断启动过程
-3. 刷入uboot，不需要刷大分区
-4. 断电后按住JOY插电，web进入刷机界面刷入[Release](https://github.com/pmyy-wt/jdc_re-cs-03/releases/latest)的factory.bin
+2. TTL终端输入jdqca中断启动过程(哪吒不需要)
+3. 刷入uboot，~~不需要刷大分区~~ 可以刷大分区(gpt.bin)
+4. 断电后按住JOY插电，web进入刷机界面刷入[Release](https://github.com/zhangdoujohndoe/jdcloud_re-cs-03/releases/latest)的factory.bin
 
 UBoot刷好之后都可以按上面步骤4进入web刷机界面
 
