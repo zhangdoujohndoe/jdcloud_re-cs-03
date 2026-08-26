@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
   #push:
   schedule:
-    - cron: "57 5 */3 * *"
+    - cron: "57 5 17 */6 *"
 
 env:
   REMOTE_REPOSITORY: openwrt/openwrt
